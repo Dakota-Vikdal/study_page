@@ -1,0 +1,55 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
+
+  .footers{
+    margin-left: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Set the height for the container (adjust as needed) */
+}
+
+.specialbutton {
+    margin: 0 100px; /* Add some horizontal spacing between buttons (adjust as needed) */
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* .radios{
+    margin-left: 20px
+} */
+
+.radio-label {
+    text-align: center;
+    left: 45%;
+    display: flex;
+    align-items: center;
+}

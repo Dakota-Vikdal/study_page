@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Buttons</title>
+    <link rel="stylesheet" href="./static/styles.css">
+    <link href="./static/alien.ico" rel="icon">
+</head>
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <header>
+                <h1>
+                    <a href="index.html">Website Title</a>
+                </h1>
+                <nav class="button-container">
+                    <button class='specialbutton' onclick="window.location.href='/python.html'">Python</button>
+                    <button class='specialbutton' onclick="window.location.href='history.html'">Programming History</button>
+                    <button class='specialbutton' onclick="window.location.href='flask.html'">Flask</button>
+                </nav>
+            </header>
+
+            <!-- Body -->
+            <main>
+                <div class="form">
+                    <h1>Python Quiz</h1>
+                
+                    <form action="submit_quiz" method="post">
+                        {% for q in questions %}
+                            <div class="question">
+                                <h4>{{ q['question'] }}</h4>
+                                {% for option in q['options'] %}
+                                    <label class='radio-label'>
+                                        <input class='radios' type="radio" name="q{{ q['id'] }}" value="{{ option }}"> {{ option }}
+                                    </label><br>
+                                {% endfor %}
+                            </div>
+                        {% endfor %}
+                
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                <a class='footers' href="https://www.linkedin.com/in/dakota-vikdal/" >🌐 Visit my Linkedin</a>
+                <a class='footers' href='https://github.com/Dakota-Vikdal'>🌄 Take a gander at my Github</a>
+                <a class='footers' href='https://medium.com/@dakota.james19'>Ⓜ️ Check out my Blogs</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
